@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Secret Mission #1</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    font-family:Arial,sans-serif;
+    text-align:center;
+    color:white;
+}
+
+.container{
+    max-width:700px;
+    padding:30px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#message{
+    display:none;
+    margin-top:20px;
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔒 Secret Mission #1</h1>
+
+<p>Are you sure you want to unlock this message? ❤️</p>
+
+<button onclick="showMessage()">
+Unlock
+</button>
+
+<div id="message">
+
+<p>
+Hey you ❤️,<br><br>
+
+This isn't your birthday message yet.<br><br>
+
+I just wanted to remind you of something before the celebrations begin.<br><br>
+
+Out of all the people I could have met, I'm really grateful that life brought me to you. You make ordinary days feel special, and even when we're not together, you somehow manage to make me smile.<br><br>
+
+I still remember coming home after spending time with you for the first time and not being able to stop smiling. I remember the fragrance you left on my clothes after we held hands, and I didn't want to wash them because it felt like keeping a little piece of you with me.<br><br>
+
+So consider this a small advance gift: a reminder that you're loved, appreciated, and thought about more often than you probably realize.<br><br>
+
+And yes, Abbai, I love you. ❤️<br><br>
+
+But don't think this is the end—this is only the first surprise. There are many more waiting for you. 🎁✨<br><br>
+
+Until then, just know that you mean a lot to me.<br><br>
+
+<b>Secret Mission #1 Completed ✅</b><br><br>
+
+❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+function showMessage(){
+    document.getElementById("message").style.display="block";
+}
+</script>
+
+</body>
+</html>
