@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File #02</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f0f10;
+    font-family:'Segoe UI',sans-serif;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:750px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.45);
+}
+
+h1{
+    color:#d4af37;
+    letter-spacing:3px;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#9c9c9c;
+    margin-bottom:30px;
+}
+
+button{
+    display:block;
+    margin:auto;
+    background:#d4af37;
+    color:black;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+#message{
+    display:none;
+    margin-top:35px;
+    line-height:1.9;
+    animation:fadeIn 1s ease;
+}
+
+.section-title{
+    color:#d4af37;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.footer{
+    margin-top:25px;
+    opacity:0.8;
+}
+
+hr{
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,0.1);
+    margin-top:25px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>CONFIDENTIAL FILE</h1>
+
+    <p class="subtitle">
+        Authorized Access Only
+    </p>
+
+    <button onclick="unlockFile()">
+        Open File
+    </button>
+
+    <div id="message">
+
+        <h2 style="text-align:center;margin-bottom:20px;">
+            Case File #02
+        </h2>
+
+        <p>
+            <strong>Status:</strong> Active
+        </p>
+
+        <p>
+            <strong>Subject:</strong> Abbai ❤️
+        </p>
+
+        <div class="section-title">Observation</div>
+
+        <p>
+            The subject has an incredibly cute smile.
+        </p>
+
+        <div class="section-title">Current Problem</div>
+
+        <p>
+            The subject has absolutely no idea how much effort is being put into a certain upcoming surprise.
+        </p>
+
+        <div class="section-title">Required Action</div>
+
+        <p>
+            • Continue being adorable.<br>
+            • Continue taking care of yourself.<br>
+            • Continue pretending you don't know what's coming.<br>
+            • Continue to love me more than yesterday. ❤️<br>
+            • Plan a movie date with your girl. 🍿❤️
+        </p>
+
+        <div class="section-title">Special Note</div>
+
+        <p>
+            A certain date is getting closer, pichiiiii... ❤️
+        </p>
+
+        <p class="footer">
+            Lots and lots of love,<br>
+            Your girl ❤️
+        </p>
+
+        <div class="section-title">Reward</div>
+
+        <p>
+            To be revealed on 26 June. ✨
+        </p>
+
+        <hr>
+
+        <p class="footer">
+            Filed with affection,<br>
+            Your girl ❤️
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+function unlockFile(){
+    document.getElementById("message").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
