@@ -1,42 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Secret Mission #1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File #02</title>
 
 <style>
-body{
+
+*{
     margin:0;
-    height:100vh;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-    font-family:Arial,sans-serif;
-    text-align:center;
+    background:#0f0f10;
+    font-family:'Segoe UI',sans-serif;
     color:white;
+    padding:20px;
 }
 
 .container{
-    max-width:700px;
-    padding:30px;
+    width:100%;
+    max-width:750px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.45);
+}
+
+h1{
+    color:#d4af37;
+    letter-spacing:3px;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#9c9c9c;
+    margin-bottom:30px;
 }
 
 button{
-    padding:15px 30px;
+    display:block;
+    margin:auto;
+    background:#d4af37;
+    color:black;
     border:none;
+    padding:14px 30px;
     border-radius:30px;
-    font-size:18px;
+    font-size:16px;
+    font-weight:600;
     cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
 }
 
 #message{
     display:none;
-    margin-top:20px;
-    background:rgba(255,255,255,0.15);
-    padding:20px;
-    border-radius:20px;
+    margin-top:35px;
+    line-height:1.9;
+    animation:fadeIn 1s ease;
 }
+
+.section-title{
+    color:#d4af37;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.footer{
+    margin-top:25px;
+    opacity:0.8;
+}
+
+hr{
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,0.1);
+    margin-top:25px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 </style>
 </head>
 
@@ -44,49 +110,88 @@ button{
 
 <div class="container">
 
-<h1>🔒 Secret Mission #1</h1>
+    <h1>CONFIDENTIAL FILE</h1>
 
-<p>Are you sure you want to unlock this message? ❤️</p>
+    <p class="subtitle">
+        Authorized Access Only
+    </p>
 
-<button onclick="showMessage()">
-Unlock
-</button>
+    <button onclick="unlockFile()">
+        Open File
+    </button>
 
-<div id="message">
+    <div id="message">
 
-<p>
-Hey you ❤️,<br><br>
+        <h2 style="text-align:center;margin-bottom:20px;">
+            Case File #02
+        </h2>
 
-This isn't your birthday message yet.<br><br>
+        <p>
+            <strong>Status:</strong> Active
+        </p>
 
-I just wanted to remind you of something before the celebrations begin.<br><br>
+        <p>
+            <strong>Subject:</strong> Abbai ❤️
+        </p>
 
-Out of all the people I could have met, I'm really grateful that life brought me to you. You make ordinary days feel special, and even when we're not together, you somehow manage to make me smile.<br><br>
+        <div class="section-title">Observation</div>
 
-I still remember coming home after spending time with you for the first time and not being able to stop smiling. I remember the fragrance you left on my clothes after we held hands, and I didn't want to wash them because it felt like keeping a little piece of you with me.<br><br>
+        <p>
+            The subject has an incredibly cute smile.
+        </p>
 
-So consider this a small advance gift: a reminder that you're loved, appreciated, and thought about more often than you probably realize.<br><br>
+        <div class="section-title">Current Problem</div>
 
-And yes, Abbai, I love you. ❤️<br><br>
+        <p>
+            The subject has absolutely no idea how much effort is being put into a certain upcoming surprise.
+        </p>
 
-But don't think this is the end—this is only the first surprise. There are many more waiting for you. 🎁✨<br><br>
+        <div class="section-title">Required Action</div>
 
-Until then, just know that you mean a lot to me.<br><br>
+        <p>
+            • Continue being adorable.<br>
+            • Continue taking care of yourself.<br>
+            • Continue pretending you don't know what's coming.<br>
+            • Continue to love me more than yesterday. ❤️<br>
+            • Plan a movie date with your girl. 🍿❤️
+        </p>
 
-<b>Secret Mission #1 Completed ✅</b><br><br>
+        <div class="section-title">Special Note</div>
 
-❤️
-</p>
+        <p>
+            A certain date is getting closer, pichiiiii... ❤️
+        </p>
 
-</div>
+        <p class="footer">
+            Lots and lots of love,<br>
+            Your girl ❤️
+        </p>
+
+        <div class="section-title">Reward</div>
+
+        <p>
+            To be revealed on 26 June. ✨
+        </p>
+
+        <hr>
+
+        <p class="footer">
+            Filed with affection,<br>
+            Your girl ❤️
+        </p>
+
+    </div>
 
 </div>
 
 <script>
-function showMessage(){
+
+function unlockFile(){
     document.getElementById("message").style.display="block";
 }
+
 </script>
 
 </body>
 </html>
+   
