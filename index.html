@@ -73,6 +73,45 @@ font-size:120px;
 animation:heartbeat 1.5s infinite;
 }
 
+.photo-frame{
+background:white;
+padding:15px;
+width:260px;
+margin:25px auto;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.photo-frame img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.photo-frame p{
+color:#333;
+font-weight:bold;
+margin-top:10px;
+}
+
+.letter-photo{
+width:250px;
+display:block;
+margin:20px auto;
+border-radius:20px;
+}
+
+.profile-pic{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+margin:25px auto;
+display:block;
+border:5px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+}
+
 @keyframes heartbeat{
 0%{transform:scale(1);}
 25%{transform:scale(1.08);}
@@ -134,6 +173,29 @@ margin-top:20px;
 text-align:center;
 font-size:22px;
 font-weight:bold;
+}
+
+.memory-section{
+text-align:center;
+margin-top:30px;
+display:none;
+}
+
+.childhood-photo{
+width:220px;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid white;
+box-shadow:0 0 20px rgba(255,255,255,.5);
+margin:15px auto;
+display:block;
+}
+
+.memory-section p{
+font-size:18px;
+margin-top:10px;
+font-style:italic;
 }
 
 .heart,.rose{
@@ -207,7 +269,14 @@ z-index:999;
 
 <div class="subtitle">
 With Endless Love,<br>
-❤️ Varsha❤️
+❤️ Varsha ❤️
+</div>
+
+<img src="akhil.jpg" alt="Akhil" class="profile-pic">
+
+<div class="photo-frame">
+<img src="akhil.jpg" alt="Akhil">
+<p>My Favorite Person ❤️</p>
 </div>
 
 <div class="cake" id="cake">🎂</div>
@@ -221,13 +290,38 @@ With Endless Love,<br>
 </div>
 
 <div class="letter" id="letter">
+
+<img src="akhil.jpg" class="letter-photo" alt="Akhil">
+
 <p id="typing"></p>
 
 <div class="signature">
 Forever Yours,<br>
 ❤️ Varshini ❤️
 </div>
+
 </div>
+
+</div> <!-- end of letter -->
+
+<div class="memory-section">
+
+<h2>❤️ My Little Birthday Boy ❤️</h2>
+
+<img src="akhil-childhood.jpg" class="childhood-photo">
+
+<p>
+From this cute little boy...
+to the man I love today ❤️
+</p>
+
+</div>
+
+<div class="letter" id="reasons">
+
+<h2>❤️ Reasons I Love You ❤️</h2>
+
+...
 
 <div class="letter" id="reasons">
 
@@ -391,8 +485,15 @@ clearInterval(speed);
 
 setTimeout(()=>{
 
+document.querySelector(".memory-section")
+.style.display="block";
+
+setTimeout(()=>{
+
 document.getElementById("reasons")
 .classList.add("show");
+
+},1500);
 
 },1000);
 
