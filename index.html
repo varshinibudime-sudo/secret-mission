@@ -154,6 +154,17 @@ pointer-events:none;
 animation:floatUp linear forwards;
 }
 
+.sparkle{
+position:fixed;
+pointer-events:none;
+animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+50%{
+opacity:.2;
+}
+}
 @keyframes floatUp{
 from{
 transform:translateY(0);
@@ -194,11 +205,7 @@ With Endless Love,<br>
 <div class="cake">🎂</div>
 
 <button class="btn" onclick="openLetter()">
-💌 Open Surprise
-</button>
-
-<button class="btn" onclick="playMusic()">
-🎵 Play Our Song
+🎁 Open Your Birthday Surprise
 </button>
 
 <div id="countdown"></div>
@@ -210,20 +217,22 @@ With Endless Love,<br>
 <div id="reasons" class="reasons">
 
 <h2>❤️ Reasons I Love You ❤️</h2>
+ 
+<p>❤️ Actually, I don't know...</p>
+ 
+<p>❤️ You're the only man who can make me blush for no reason.</p>
 
-<p>❤️ You're the only man who can make me blush.</p>
+<p>❤️ I keep trying to find a reason why I love you.</p> 
 
-<p>❤️ Your smile makes my day brighter.</p>
+<p>❤️ But love doesn't always need a reason.</p> 
 
-<p>❤️ You make ordinary moments special.</p>
+<p>❤️ Maybe it's your smile.</p> 
 
-<p>❤️ I love your heart.</p>
+<p>❤️ Maybe it's your heart.</p> 
 
-<p>❤️ I love your kindness.</p>
+<p>❤️ Or maybe...</p> 
 
-<p>❤️ And most importantly...</p>
-
-<p>❤️ I love you because you're Akhil ❤️</p>
+<p>❤️ It's simply because you're Akhil.</p>
 
 </div>
 
@@ -237,10 +246,6 @@ Forever Yours,<br>
 </button>
 
 </div>
-
-<audio id="bgmusic" loop>
-<source src="music.mp3" type="audio/mpeg">
-</audio>
 
 </div>
 
@@ -265,17 +270,6 @@ happiness, success and good health.
 No matter what happens,
 you will always be special to me ❤️
 `;
-
-function playMusic(){
-
-const music=document.getElementById("bgmusic");
-
-music.play()
-.catch(()=>{
-alert("Unable to play music. Check music.mp3 file.");
-});
-
-}
 
 function openLetter(){
 
@@ -394,6 +388,28 @@ heart.remove();
 
 }
 
+function sparkle(){
+
+const s=document.createElement("div");
+
+s.className="sparkle";
+
+s.innerHTML="✨";
+
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(s);
+
+setTimeout(()=>{
+s.remove();
+},2500);
+
+}
+
+setInterval(sparkle,1800);
+
+setInterval(createHeart,2000);
 function heartRain(){
 
 for(let i=0;i<120;i++){
