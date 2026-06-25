@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Akhil ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'poppins',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
@@ -43,73 +45,22 @@ padding:40px;
 text-align:center;
 color:white;
 box-shadow:0 10px 40px rgba(0,0,0,0.2);
-z-index:2;
 }
 
 h1{
 font-family:'Great Vibes',cursive;
 font-size:4rem;
 text-shadow:0 0 25px rgba(255,255,255,.8);
-animation:glow 3s infinite alternate;
 }
-
-@keyframes glow{
-from{
-text-shadow:0 0 15px white;
-}
-to{
-text-shadow:0 0 35px #fff;
-}
-}
-
 
 .subtitle{
-font-size:1.3rem;
+font-size:1.2rem;
 margin-bottom:20px;
 }
 
 .cake{
 font-size:120px;
 animation:heartbeat 1.5s infinite;
-}
-
-.photo-frame{
-background:white;
-padding:15px;
-width:260px;
-margin:25px auto;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-}
-
-.photo-frame img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
-
-.photo-frame p{
-color:#333;
-font-weight:bold;
-margin-top:10px;
-}
-
-.letter-photo{
-width:250px;
-display:block;
-margin:20px auto;
-border-radius:20px;
-}
-
-.profile-pic{
-width:220px;
-height:220px;
-object-fit:cover;
-border-radius:50%;
-margin:25px auto;
-display:block;
-border:5px solid white;
-box-shadow:0 0 25px rgba(255,255,255,.6);
 }
 
 @keyframes heartbeat{
@@ -120,11 +71,6 @@ box-shadow:0 0 25px rgba(255,255,255,.6);
 100%{transform:scale(1);}
 }
 
-
-.btn:hover{
-transform:scale(1.08);
-}
-
 .btn{
 margin:10px;
 padding:15px 30px;
@@ -133,12 +79,20 @@ border-radius:50px;
 cursor:pointer;
 font-size:18px;
 font-weight:600;
-
 background:white;
 color:#ff4f8b;
-
 box-shadow:0 5px 20px rgba(0,0,0,.2);
 transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+#countdown{
+font-size:70px;
+font-weight:bold;
+margin-top:20px;
 }
 
 .letter{
@@ -154,7 +108,7 @@ text-align:left;
 
 .show{
 display:block;
-animation:fade 2s;
+animation:fade 1.5s;
 }
 
 @keyframes fade{
@@ -175,41 +129,29 @@ font-size:22px;
 font-weight:bold;
 }
 
-.memory-section{
-text-align:center;
-margin-top:30px;
+.reasons{
 display:none;
-}
-
-.childhood-photo{
-width:220px;
-height:280px;
-object-fit:cover;
+margin-top:25px;
+padding:20px;
+background:rgba(255,255,255,.12);
 border-radius:20px;
-border:4px solid white;
-box-shadow:0 0 20px rgba(255,255,255,.5);
-margin:15px auto;
-display:block;
+text-align:left;
 }
 
-.memory-section p{
-font-size:18px;
-margin-top:10px;
-font-style:italic;
+.reasons h2{
+text-align:center;
+margin-bottom:15px;
 }
 
-.heart,.rose{
-position:fixed;
-pointer-events:none;
-z-index:1;
+.reasons p{
+margin:10px 0;
 }
 
 .heart{
+position:fixed;
+bottom:-50px;
+pointer-events:none;
 animation:floatUp linear forwards;
-}
-
-.rose{
-animation:fallDown linear forwards;
 }
 
 @keyframes floatUp{
@@ -223,37 +165,14 @@ opacity:0;
 }
 }
 
-@keyframes fallDown{
-from{
-transform:translateY(-100px);
-opacity:1;
-}
-to{
-transform:translateY(110vh);
-opacity:0;
-}
-}
-
-.sparkle{
-position:fixed;
-color:white;
-animation:twinkle 2s infinite;
-pointer-events:none;
-}
-
-@keyframes twinkle{
-50%{opacity:.2;}
-}
-
 #quote{
 position:fixed;
 bottom:20px;
 left:50%;
 transform:translateX(-50%);
-font-size:20px;
+font-size:18px;
 color:white;
 font-style:italic;
-z-index:999;
 }
 
 </style>
@@ -261,7 +180,7 @@ z-index:999;
 
 <body>
 
-<div id="quote"></div>
+<div id="quote">Forever starts with you ❤️</div>
 
 <div class="card">
 
@@ -272,94 +191,58 @@ With Endless Love,<br>
 ❤️ Varsha ❤️
 </div>
 
-<img src="akhil.jpg" alt="Akhil" class="profile-pic">
-
-<div class="photo-frame">
-<img src="akhil.jpg" alt="Akhil">
-<p>My Favorite Person ❤️</p>
-</div>
-
-<div class="cake" id="cake">🎂</div>
+<div class="cake">🎂</div>
 
 <button class="btn" onclick="openLetter()">
-💌 There is a suprise 
+💌 Open Surprise
 </button>
 
-<div id="countdown" style="display:none;font-size:60px;font-weight:bold;margin-top:20px;">
-3
-</div>
+<button class="btn" onclick="playMusic()">
+🎵 Play Our Song
+</button>
+
+<div id="countdown"></div>
 
 <div class="letter" id="letter">
 
-<img src="akhil.jpg" class="letter-photo" alt="Akhil">
-
 <p id="typing"></p>
+
+<div id="reasons" class="reasons">
+
+<h2>❤️ Reasons I Love You ❤️</h2>
+
+<p>❤️ You're the only man who can make me blush.</p>
+
+<p>❤️ Your smile makes my day brighter.</p>
+
+<p>❤️ You make ordinary moments special.</p>
+
+<p>❤️ I love your heart.</p>
+
+<p>❤️ I love your kindness.</p>
+
+<p>❤️ And most importantly...</p>
+
+<p>❤️ I love you because you're Akhil ❤️</p>
+
+</div>
 
 <div class="signature">
 Forever Yours,<br>
 ❤️ Varshini ❤️
 </div>
 
-</div>
-
-</div> <!-- end of letter -->
-
-<div class="memory-section">
-
-<h2>❤️ My Little Birthday Boy ❤️</h2>
-
-<img src="akhil-childhood.jpg" class="childhood-photo">
-
-<p>
-From this cute little boy...
-to the man I love today ❤️
-</p>
-
-</div>
-
-<div class="letter" id="reasons">
-
-<h2>❤️ Reasons I Love You ❤️</h2>
-
-...
-
-<div class="letter" id="reasons">
-
-<h2>❤️ Reasons I Love You ❤️</h2>
-
-<p>❤️ Actually, I don't know...</p>
-
-<p>❤️ You're the only man who can make me blush for no reason.</p>
-
-<p>❤️ I keep trying to find a reason why I love you.</p>
-
-<p>❤️ But love doesn't always need a reason.</p>
-
-<p>❤️ Maybe it's your smile.</p>
-
-<p>❤️ Maybe it's your heart.</p>
-
-<p>❤️ Or maybe...</p>
-
-<p>❤️ It's simply because you're Akhil.</p>
-
-</div>
-
-<button class="btn"
-onclick="heartRain()">
-
+<button class="btn" onclick="heartRain()">
 ❤️ One Last Surprise
-
 </button>
 
 </div>
-<button class="btn" onclick="playMusic()">
-🎵 Play Our Song
-</button>
 
-<audio id="bgmusic" controls preload="auto">
-<source src="./music.mp3">
+<audio id="bgmusic" loop>
+<source src="music.mp3" type="audio/mpeg">
 </audio>
+
+</div>
 
 <script>
 
@@ -370,14 +253,9 @@ I don't know if I'm there beside you now or not,
 but I truly wish I could be with you on your special day.
 
 I hope we celebrate all your birthdays together with love,
-laughter, happiness, and countless beautiful memories.
+laughter, happiness and countless beautiful memories.
 
-Don't ever forget that there is someone who is ready
-to spend the rest of her life with you.
-
-Through all your good days and bad days,
-through every challenge and every success,
-I want to be there beside you.
+Thank you for being part of my life.
 
 Happy Birthday to the man of my life ❤️
 
@@ -385,9 +263,79 @@ May God bless you with lots of love,
 happiness, success and good health.
 
 No matter what happens,
-this woman only loves you and hopes
-to spend the rest of her life with you.
+you will always be special to me ❤️
 `;
+
+function playMusic(){
+
+const music=document.getElementById("bgmusic");
+
+music.play()
+.catch(()=>{
+alert("Unable to play music. Check music.mp3 file.");
+});
+
+}
+
+function openLetter(){
+
+let count=3;
+
+const counter=document.getElementById("countdown");
+
+const timer=setInterval(()=>{
+
+counter.innerHTML=count;
+
+count--;
+
+if(count<0){
+
+clearInterval(timer);
+
+counter.innerHTML="";
+
+fireworks();
+
+document.getElementById("letter")
+.classList.add("show");
+
+startTyping();
+
+}
+
+},1000);
+
+}
+
+function startTyping(){
+
+let i=0;
+
+let txt=document.getElementById("typing");
+
+txt.innerHTML="";
+
+let speed=setInterval(()=>{
+
+if(i<message.length){
+
+txt.innerHTML+=message.charAt(i);
+
+i++;
+
+}else{
+
+clearInterval(speed);
+
+document.getElementById("reasons")
+.style.display="block";
+
+}
+
+},35);
+
+}
 
 function fireworks(){
 
@@ -401,21 +349,13 @@ fw.style.position="fixed";
 fw.style.left="50%";
 fw.style.top="50%";
 fw.style.fontSize="30px";
-fw.style.pointerEvents="none";
-fw.style.zIndex="9999";
 
 const x=(Math.random()-0.5)*700;
 const y=(Math.random()-0.5)*700;
 
 fw.animate([
-{
-transform:"translate(0,0)",
-opacity:1
-},
-{
-transform:`translate(${x}px,${y}px)`,
-opacity:0
-}
+{transform:"translate(0,0)",opacity:1},
+{transform:`translate(${x}px,${y}px)`,opacity:0}
 ],{
 duration:2000
 });
@@ -427,90 +367,39 @@ fw.remove();
 },2000);
 
 }
-}
-
-function openLetter(){
-
-let count = 3;
-
-const counter = document.getElementById("countdown");
-
-counter.style.display = "block";
-
-const timer = setInterval(()=>{
-
-counter.innerHTML = count;
-
-count--;
-
-if(count < 0){
-
-clearInterval(timer);
-
-counter.style.display = "none";
-
-document.getElementById("cake").style.display="none";
-
-fireworks();
-
-document.getElementById("letter").classList.add("show");
-
-startTyping();
 
 }
 
-},1000);
+function createHeart(){
 
-}
+const heart=document.createElement("div");
 
-function startTyping(){
+heart.className="heart";
 
-let i = 0;
+heart.innerHTML="❤️";
 
-let txt = document.getElementById("typing");
+heart.style.left=Math.random()*100+"vw";
 
-txt.innerHTML = "";
+heart.style.fontSize=
+(20+Math.random()*25)+"px";
 
-let speed = setInterval(()=>{
+heart.style.animationDuration=
+(5+Math.random()*4)+"s";
 
-if(i < message.length){
-
-txt.innerHTML += message.charAt(i);
-
-i++;
-
-}else{
-
-clearInterval(speed);
+document.body.appendChild(heart);
 
 setTimeout(()=>{
-
-document.querySelector(".memory-section")
-.style.display="block";
-
-setTimeout(()=>{
-
-document.getElementById("reasons")
-.classList.add("show");
-
-},1500);
-
-},1000);
-
-}
-
-},35);
+heart.remove();
+},9000);
 
 }
 
 function heartRain(){
 
-for(let i=0;i<80;i++){
+for(let i=0;i<120;i++){
 
 setTimeout(()=>{
-
 createHeart();
-
 },i*20);
 
 }
@@ -519,101 +408,9 @@ fireworks();
 
 }
 
-
-function createHeart(){
-
-const heart=document.createElement("div");
-
-heart.className="heart";
-heart.innerHTML="❤️";
-
-heart.style.left=Math.random()*100+"vw";
-heart.style.fontSize=(20+Math.random()*25)+"px";
-heart.style.animationDuration=(5+Math.random()*4)+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>heart.remove(),9000);
-}
-
-const quotes=[
-
-"Forever starts with you ❤️",
-
-"You are my today and all my tomorrows ❤️",
-
-"My favorite place is next to you ❤️",
-
-"Happy Birthday Pichi Abbai ❤️"
-
-];
-
-document.getElementById("quote").innerHTML = quotes[0];
-
-let q=0;
-
-setInterval(()=>{
-
-document.getElementById("quote").innerHTML=
-quotes[q];
-
-q=(q+1)%quotes.length;
-
-},3000);
-setInterval(createHeart,2500);
-
-function createRose(){
-
-const rose=document.createElement("div");
-
-rose.className="rose";
-rose.innerHTML="🌸";
-
-rose.style.left=Math.random()*100+"vw";
-rose.style.fontSize=(20+Math.random()*20)+"px";
-rose.style.animationDuration=(6+Math.random()*4)+"s";
-
-document.body.appendChild(rose);
-
-setTimeout(()=>rose.remove(),10000);
-}
-
-setInterval(createRose,4500);
-
-function sparkle(){
-
-const s=document.createElement("div");
-
-s.className="sparkle";
-s.innerHTML="✨";
-
-s.style.left=Math.random()*100+"vw";
-s.style.top=Math.random()*100+"vh";
-
-document.body.appendChild(s);
-
-setTimeout(()=>s.remove(),2500);
-
-}
-
-setInterval(sparkle,2500);
-
-function playMusic(){
-
-const music = document.getElementById("bgmusic");
-
-music.play()
-.then(() => {
-console.log("Music playing");
-})
-.catch(error => {
-alert("Music could not be played. Please check music.mp3");
-console.error(error);
-});
-
-}
+setInterval(createHeart,2000);
 
 </script>
 
 </body>
-</html>      
+</html>
